@@ -1,0 +1,41 @@
+raza-habitat-suitability-ml/
+│
+├── README.md
+├── requirements.txt
+├── LICENSE
+├── .gitignore
+├── setup.py
+│
+├── data/
+│   ├── raw/
+│   │   └── .gitkeep                 # raza_LL.xls + *.tif rasters go here
+│   └── processed/
+│       └── .gitkeep
+│
+├── src/
+│   ├── __init__.py
+│   ├── config.py                    # Paths + hyperparameter grids
+│   ├── raster_io.py                 # Raster loading / alignment / extraction
+│   ├── data_loader.py               # Occurrence loading + preprocessing
+│   ├── models.py                    # RF / XGB / MLP / LR builders
+│   ├── train.py                     # GridSearchCV training
+│   ├── evaluate.py                  # Metrics + ROC curves
+│   ├── suitability.py               # Full-raster prediction + classification
+│   └── shap_analysis.py             # Multi-model SHAP analysis
+│
+├── scripts/
+│   ├── run_pipeline.py              # End-to-end run
+│   └── predict_raster.py            # Apply saved models to rasters
+│
+├── notebooks/
+│   └── exploratory_analysis.ipynb
+│
+├── outputs/
+│   ├── models/
+│   ├── figures/
+│   ├── maps/
+│   ├── shap/
+│   └── tables/
+│
+└── docs/
+    └── methodology.md

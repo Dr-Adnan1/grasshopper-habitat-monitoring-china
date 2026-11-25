@@ -1,0 +1,5 @@
+bash
+python -m scripts.run_pipeline \
+    --raster-folder data/raw \
+    --occurrence data/raw/LL.xls \
+    --prefix_
